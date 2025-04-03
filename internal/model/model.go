@@ -78,3 +78,7 @@ type User struct {
 	name  string
 	phone []string
 }
+
+func (a Adminka) Add() string {
+	return "I am the Adminka"
+}

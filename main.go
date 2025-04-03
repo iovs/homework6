@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	// "homework6/internal/model"
+	"homework6/internal/model"
 )
 
 //type Order struct {
@@ -15,25 +15,24 @@ import (
 //}
 
 type Orders interface {
-	add() string
+	Add() string
 }
 
-type Adminka struct {
-	Import string
-	File   string
-}
-
-func (a Adminka) add() string {
-	return "I am the Adminka"
-}
+//type Adminka struct {
+//	Import string
+//	File   string
+//}
+//func (a model.Adminka) add() string {
+//	return "I am the Adminka"
+//}
 
 func main() {
-	Adminka := Adminka{}
+	Adminka := model.Adminka{}
 	add(Adminka)
 }
 
 func add(orders Orders) {
-	fmt.Println(orders.add())
+	fmt.Println(orders.Add())
 }
 
 //fmt.Println(service.NewImport())
