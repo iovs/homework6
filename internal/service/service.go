@@ -1,9 +1,22 @@
 package service
 
-//"homework6/internal/model/adminka.go"
-//"homework6/internal/model/orders.go"
-//"homework6/internal/model/products.go"
-//"homework6/internal/model/users.go"
+import (
+	"fmt"
+	"homework6/internal/model"
+)
+
+type Orders interface {
+	Add() string
+}
+
+func Func1() {
+	Adminka := model.Adminka{}
+	add(Adminka)
+}
+
+func add(orders Orders) {
+	fmt.Println(orders.Add())
+}
 
 //type Adminka struct {
 //	Import string

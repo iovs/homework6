@@ -14,6 +14,7 @@ import (
 //	DeliveryAdress []string
 //}
 
+// Интерфейс Orders
 type Orders interface {
 	Add() string
 }
@@ -27,6 +28,7 @@ type Orders interface {
 //}
 
 func main() {
+	//	service.Func1()
 	Adminka := model.Adminka{}
 	add(Adminka)
 }
@@ -35,7 +37,6 @@ func add(orders Orders) {
 	fmt.Println(orders.Add())
 }
 
-//fmt.Println(service.NewImport())
 //fmt.Println(NewFunc1)
 //	println(func1.NewImport{s, d})
 //
@@ -51,4 +52,4 @@ func add(orders Orders) {
 //		repository.CreateItem1(context, addproductcategory)
 //		repository.CreateItem1(context, adduser)
 
-//println("Вывод чего-то )",  ) // вывод в лог информации о слайсах len может не уверен что println вывод в лог
+//println("Вывод чего-то )",  ) // вывод в лог информации о слайсах
