@@ -1,6 +1,8 @@
 package model
 
-import "time"
+import (
+	"time"
+)
 
 //# Админка приложения (структура)
 //Административный интерфейс позволяет администратору приложения загрузить данные о товарах и категориях из файла или по ссылке, без программирования.
@@ -79,6 +81,16 @@ type User struct {
 	phone []string
 }
 
+type Orders interface {
+	Add() string
+}
+
 func (a Adminka) Add() string {
-	return "I am the Adminka"
+	// return "I am the Adminka"
+	return "Админка" + a.File + a.Import
+}
+
+func (o Order) Add() string {
+	// return "I am the Order"
+	return "Order" + o.Status
 }

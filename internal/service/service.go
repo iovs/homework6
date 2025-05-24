@@ -1,22 +1,37 @@
 package service
 
 import (
-	"fmt"
 	"homework6/internal/model"
+	"homework6/internal/repository"
+	"math/rand"
+	"time"
 )
 
-type Orders interface {
-	Add() string
+func Createitem() {
+	rand.NewSource(time.Now().UnixNano())
+	if rand.Intn(2) == 0 {
+		d := model.Adminka{File: "file text"}
+	repository.AddData(d)
+	} else {
+		o := model.Order{Status: "ok"}
+	repository.AddData(o)
+	}
+		 
 }
 
-func Func1() {
-	Adminka := model.Adminka{}
-	add(Adminka)
-}
 
-func add(orders Orders) {
-	fmt.Println(orders.Add())
-}
+//type Orders interface {
+//	Add() string
+//}
+
+//func Func1() {
+//	Adminka := model.Adminka{}
+//	add(Adminka)
+//}
+
+//func add(orders Orders) {
+//	fmt.Println(orders.Add())
+//}
 
 //type Adminka struct {
 //	Import string
