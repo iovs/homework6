@@ -29,7 +29,7 @@ func AddData(data model.ID) {
 		fmt.Println("add User", v)
 	case model.Adminka:
 		adminka = append(adminka, v)
-		fmt.Println("add Adminka")
+		fmt.Println("add Adminka", v)
 	default:
 		fmt.Printf("Неопределенный тип данных: %T/n", v)
 	}
