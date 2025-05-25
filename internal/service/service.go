@@ -3,29 +3,46 @@ package service
 import (
 	"homework6/internal/model"
 	"homework6/internal/repository"
-	"math/rand"
-	"time"
+//	"math/rand"
+//	"time"
 )
 
 func Createitem() {
-	rand.NewSource(time.Now().UnixNano())
-	if rand.Intn(5) == 0 {
-		//	d := model.Adminka{File: "file text"}
-		p := model.Product{ID: 0}
-		repository.AddData(p)
-	} else if rand.Intn(5) == 1 {
-		c := model.Category{ID: 1}
-		repository.AddData(c)
-	} else if rand.Intn(5) == 2 {
-		o := model.Order{ID: 2}
-		repository.AddData(o)
-	} else if rand.Intn(5) == 3 {
-		u := model.User{ID: 3}
-		repository.AddData(u)
-	} else if rand.Intn(5) == 4 {
+//	rand.NewSource(time.Now().UnixNano())
+//	if rand.Intn(5) == 0 {
+//		//	d := model.Adminka{File: "file text"}
+//		p := model.Product{ID: 0}
+//		repository.AddData(p)
+//	} else if rand.Intn(5) == 1 {
+//		c := model.Category{ID: 1}
+//		repository.AddData(c)
+//	} else if rand.Intn(5) == 2 {
+//		o := model.Order{ID: 2}
+//		repository.AddData(o)
+//	} else if rand.Intn(5) == 3 {
+//		u := model.User{ID: 3}
+//		repository.AddData(u)
+//	} else if rand.Intn(5) == 4 {
+//		a := model.Adminka{ID: 4}
+//		repository.AddData(a)
+//	}
+for i :=1; i<6; i++ {
+	if i == 1 {
+	p := model.Product{ID: 1}
+	repository.AddData(p)}
+    if i == 2 {
+	c := model.Category{ID: 2}
+    repository.AddData(c)}
+	if i == 3 {
+    o := model.Order{ID: 2}
+    repository.AddData(o)}
+	if i == 4 {
+    u := model.User{ID: 3}
+    repository.AddData(u)}
+	if i == 5 {
 		a := model.Adminka{ID: 4}
-		repository.AddData(a)
-	}
+    repository.AddData(a)}
+}
 }
 
 //type Orders interface {

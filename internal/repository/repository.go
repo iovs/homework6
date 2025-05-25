@@ -6,29 +6,29 @@ import (
 )
 
 // var adminka []model.Adminka
-var order []model.Order
-var product []model.Product
-var category []model.Category
-var user []model.User
-var adminka []model.Adminka
+var order []*model.Order
+var product []*model.Product
+var category []*model.Category
+var user []*model.User
+var adminka []*model.Adminka
 
 // func AddData(data model.Orders) {
 func AddData(data model.ID) {
 	switch v := data.(type) {
 	case model.Order:
-		order = append(order, v)
+		order = append(order, &v)
 		fmt.Println("add Order", v)
 	case model.Product:
-		product = append(product, v)
+		product = append(product, &v)
 		fmt.Println("add Product", v)
 	case model.Category:
-		category = append(category, v)
+		category = append(category, &v)
 		fmt.Println("add Category", v)
 	case model.User:
-		user = append(user, v)
+		user = append(user, &v)
 		fmt.Println("add User", v)
 	case model.Adminka:
-		adminka = append(adminka, v)
+		adminka = append(adminka, &v)
 		fmt.Println("add Adminka", v)
 	default:
 		fmt.Printf("Неопределенный тип данных: %T/n", v)
