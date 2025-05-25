@@ -17,16 +17,16 @@ func AddData(data model.ID) {
 	switch v := data.(type) {
 	case model.Order:
 		order = append(order, v)
-		fmt.Println("add Order")
+		fmt.Println("add Order", v)
 	case model.Product:
 		product = append(product, v)
-		fmt.Println("add Product")
+		fmt.Println("add Product", v)
 	case model.Category:
 		category = append(category, v)
-		fmt.Println("add Category")
+		fmt.Println("add Category", v)
 	case model.User:
 		user = append(user, v)
-		fmt.Println("add User")
+		fmt.Println("add User", v)
 	case model.Adminka:
 		adminka = append(adminka, v)
 		fmt.Println("add Adminka")
