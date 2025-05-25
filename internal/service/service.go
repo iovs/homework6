@@ -9,16 +9,24 @@ import (
 
 func Createitem() {
 	rand.NewSource(time.Now().UnixNano())
-	if rand.Intn(2) == 0 {
-		d := model.Adminka{File: "file text"}
-	repository.AddData(d)
-	} else {
-		o := model.Order{Status: "ok"}
-	repository.AddData(o)
+	if rand.Intn(5) == 0 {
+		//	d := model.Adminka{File: "file text"}
+		p := model.Product{ID: 0}
+		repository.AddData(p)
+	} else if rand.Intn(5) == 1 {
+		c := model.Category{ID: 1}
+		repository.AddData(c)
+	} else if rand.Intn(5) == 2 {
+		o := model.Order{ID: 2}
+		repository.AddData(o)
+	} else if rand.Intn(5) == 3 {
+		u := model.User{ID: 3}
+		repository.AddData(u)
+	} else if rand.Intn(5) == 4 {
+		a := model.Adminka{ID: 4}
+		repository.AddData(a)
 	}
-		 
 }
-
 
 //type Orders interface {
 //	Add() string

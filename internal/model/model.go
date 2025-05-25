@@ -11,6 +11,7 @@ import (
 //- Файл //Возможность загрузки файла, не знаю какого типа поле
 
 type Adminka struct {
+	ID     int64
 	Import string
 	File   string
 }
@@ -81,16 +82,40 @@ type User struct {
 	phone []string
 }
 
-type Orders interface {
-	Add() string
+//type Orders interface {
+//	Add() string
+//}
+
+type ID interface {
+	GetID() int64
 }
 
-func (a Adminka) Add() string {
-	// return "I am the Adminka"
-	return "Админка" + a.File + a.Import
+//func (a Adminka) Add() string {
+//	// return "I am the Adminka"
+//	return "Админка" + a.File + a.Import
+//}
+
+func (o Order) GetID() int64 {
+	// return "I am the Order stuct"
+	return o.ID
 }
 
-func (o Order) Add() string {
-	// return "I am the Order"
-	return "Order" + o.Status
+func (p Product) GetID() int64 {
+	// return "I am the Product sruct"
+	return p.ID
+}
+
+func (c Category) GetID() int64 {
+	// return "I am the Category sruct"
+	return c.ID
+}
+
+func (u User) GetID() int64 {
+	// return "I am the User sruct"
+	return u.ID
+}
+
+func (a Adminka) GetID() int64 {
+	// return "I am the Adminka sruct"
+	return a.ID
 }
